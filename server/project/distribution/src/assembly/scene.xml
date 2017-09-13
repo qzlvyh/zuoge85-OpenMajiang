@@ -32,5 +32,12 @@
             </includes>
             <outputDirectory>scene/</outputDirectory>
         </fileSet>
+        <fileSet>
+            <directory>${config.path}/scene/</directory>
+            <includes>
+                <include>Dockerfile</include>
+            </includes>
+            <outputDirectory>scene/</outputDirectory>
+        </fileSet>
     </fileSets>
 </component>
