@@ -11,3 +11,5 @@ build.tools.maven=maven3.2.5
 
 # Docker镜像构建之后push的仓库地址
 docker.repo=registry.cn-beijing.aliyuncs.com/majiang/all
+
+build.command=sh build.sh
