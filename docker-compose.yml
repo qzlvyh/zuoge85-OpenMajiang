@@ -1,0 +1,31 @@
+release-portal-api:
+  restart: always
+  expose:
+    - 8080/tcp
+  labels:
+    aliyun.scale: '1'
+    aliyun.routing.port_8080: 'http://portal-api.lipspay.com'
+    aliyun.log_store_dbstdout: stdout
+  image: 'registry-vpc.cn-beijing.aliyuncs.com/lips-cloud-release/portal-api:latest'
+  mem_limit: 1G
+  memswap_limit: 1G
+release-portal-web:
+  restart: always
+  expose:
+    - 80/tcp
+  labels:
+    aliyun.routing.port_80: 'http://portal.lipspay.com'
+    aliyun.scale: '1'
+    aliyun.log_store_dbstdout: stdout
+  links:
+    - release-portal-api:release-portal-api
+  image: 'registry-vpc.cn-beijing.aliyuncs.com/lips-cloud-release/portal-web:latest'
+  mem_limit: 512M
+  memswap_limit: 512M
+db:
+  image: registry.aliyuncs.com/acs-sample/mysql:5.7
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+  restart: always
+  labels:
+    aliyun.logs: /var/log/mysql

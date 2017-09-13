@@ -7,7 +7,7 @@ cd maven
 ./install.sh
 
 
-cd ../project
+cd server/project/distribution/target/docker-bin/boss/Dockerfile
 
 mvn clean package -Pbj -X
 

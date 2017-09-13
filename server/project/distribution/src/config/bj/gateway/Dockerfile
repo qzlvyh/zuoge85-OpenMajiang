@@ -4,7 +4,7 @@ WORKDIR /usr/src/myapp
 
 COPY classes classes
 COPY lib lib
-COPY startup startup
+COPY startup.sh startup.sh
 
 EXPOSE 8010
 CMD ["./startup.sh"]
