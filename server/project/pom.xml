@@ -306,7 +306,7 @@
         </repository>
         <repository>
             <id>maven-repository</id>
-            <url>https://raw.githubusercontent.com/zuoge85/maven-repo/master/repository/</url>
+            <url>http://zuoge85.github.io/maven-repo/repository/</url>
         </repository>
     </repositories>
     <pluginRepositories>
