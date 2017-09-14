@@ -1,31 +1,39 @@
-release-portal-api:
+boss:
+  image: 'registry-internal.cn-beijing.aliyuncs.com/majiang/boss:latest'
   restart: always
-  expose:
-    - 8080/tcp
-  labels:
-    aliyun.scale: '1'
-    aliyun.routing.port_8080: 'http://portal-api.lipspay.com'
-    aliyun.log_store_dbstdout: stdout
-  image: 'registry-vpc.cn-beijing.aliyuncs.com/lips-cloud-release/portal-api:latest'
+  hostname: boss
   mem_limit: 1G
   memswap_limit: 1G
-release-portal-web:
+scene:
+  image: 'registry-internal.cn-beijing.aliyuncs.com/majiang/scene:latest'
   restart: always
-  expose:
-    - 80/tcp
-  labels:
-    aliyun.routing.port_80: 'http://portal.lipspay.com'
-    aliyun.scale: '1'
-    aliyun.log_store_dbstdout: stdout
-  links:
-    - release-portal-api:release-portal-api
-  image: 'registry-vpc.cn-beijing.aliyuncs.com/lips-cloud-release/portal-web:latest'
-  mem_limit: 512M
-  memswap_limit: 512M
-db:
-  image: registry.aliyuncs.com/acs-sample/mysql:5.7
+  hostname: scene
+  mem_limit: 1G
+  memswap_limit: 1G
+gateway:
+  image: 'registry-internal.cn-beijing.aliyuncs.com/majiang/gateway:latest'
+  restart: always
+  hostname: gateway
+  mem_limit: 1G
+  memswap_limit: 1G
+  ports:
+    - '8010:8010/tcp'
+client:
+  image: 'registry-internal.cn-beijing.aliyuncs.com/majiang/client:latest'
+  restart: always
+  hostname: client
+  mem_limit: 1G
+  memswap_limit: 1G
+  ports:
+    - '80:8080/tcp'
+mysql:
+  hostname: mysql
+  image: mysql:5.7
   environment:
-    MYSQL_ROOT_PASSWORD: password
+    MYSQL_ROOT_PASSWORD: 111111
+    MYSQL_DATABASE: boss
   restart: always
   labels:
     aliyun.logs: /var/log/mysql
+  volumes:
+    - /data/mysql:/var/lib/mysql
