@@ -21,7 +21,7 @@
         <fileSet>
             <directory>${config.path}/client/</directory>
             <includes>
-                <include>SceneConfig.xml</include>
+                <include>application.yml</include>
             </includes>
             <outputDirectory>client/classes/</outputDirectory>
         </fileSet>
