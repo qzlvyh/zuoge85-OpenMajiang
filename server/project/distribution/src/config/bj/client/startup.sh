@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-java   -server  -verbose:gc   -cp ./client majiang.client.ClientMain
+java   -server  -verbose:gc   -cp ./classes majiang.client.ClientMain

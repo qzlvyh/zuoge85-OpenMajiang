@@ -1,5 +1,5 @@
 #!/bin/sh
 
 
-java   -server  -verbose:gc   -cp ./gateway game.gateway.GatewayMain
+java   -server  -verbose:gc   -cp ./classes game.gateway.GatewayMain
 
