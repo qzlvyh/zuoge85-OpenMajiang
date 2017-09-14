@@ -110,7 +110,7 @@
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-all</artifactId>
-            <version>4.2</version>
+            <version>4.0</version>
         </dependency>
         <dependency>
             <groupId>org.javassist</groupId>
@@ -195,6 +195,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
     </dependencies>
     <build>
         <!-- <resources> <resource> <directory>src/main/resources</directory> <filtering>true</filtering>
