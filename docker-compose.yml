@@ -39,7 +39,7 @@ client:
   mem_limit: 1G
   memswap_limit: 1G
   ports:
-    - '80:8080/tcp'
+    - '8081:8080/tcp'
   links:
        - mysql
        - boss
