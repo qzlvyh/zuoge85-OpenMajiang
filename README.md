@@ -47,9 +47,6 @@ https://github.com/forkjoinorg/base/tree/2.0.1
 可以微信打开了，但是不能微信登录。谢谢，
 
 
-服务器按需付费，帮我节约点流量。。什么时候关闭服务器，不保证！！
-<http://gd.paipaimj.com>
-
 
 
 ## 游戏服务器启动说明
