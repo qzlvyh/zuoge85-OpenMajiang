@@ -1,6 +1,6 @@
 site:
     title: 北京麻将
-    serverUrl: ws://47.94.39.12:8010/g
+    serverUrl: ws://www.openmajiang.com:8010/g
 application:
     message: Hello, Andy
 
