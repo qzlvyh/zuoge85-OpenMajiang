@@ -4,6 +4,10 @@
 
 现在我决定继续更新这个项目！并在我的blog 和公众号发布系列文章！
 
+测试服务器已经可以用，请不要用微信打开！
+
+地址<www.paipaimj.com>
+
 我的blog地址: <https://www.forkjoin.org>
 
 关注我的微信公众号:
